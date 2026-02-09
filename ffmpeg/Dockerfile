@@ -31,6 +31,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Add the intel-graphics PPA
 RUN add-apt-repository -y ppa:kobuk-team/intel-graphics
+# 暂时还不支持 linux/arm64
 RUN apt-get update && apt-get install -y --no-install-recommends \
     intel-media-va-driver-non-free \
     libmfx-gen1 \

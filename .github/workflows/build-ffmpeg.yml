@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push ffmpeg image
         uses: docker/build-push-action@v4
@@ -40,5 +40,5 @@ jobs:
           context: ./ffmpeg
           file: ./ffmpeg/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/${{ github.repository }}:ffmpeg-latest
+          platforms: linux/amd64
+          tags: ghcr.io/waynecommand/infra-images:ffmpeg-latest
