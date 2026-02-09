@@ -40,5 +40,5 @@ jobs:
           context: ./ffmpeg
           file: ./ffmpeg/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: ghcr.io/waynecommand:ffmpeg-latest
