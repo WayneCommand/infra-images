@@ -41,4 +41,4 @@ jobs:
           file: ./ffmpeg/Dockerfile
           push: true
           platforms: linux/amd64
-          tags: ghcr.io/waynecommand:ffmpeg-latest
+          tags: ghcr.io/waynecommand/infra-images:ffmpeg-latest
